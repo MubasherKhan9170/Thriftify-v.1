@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".view.ui.scan.EditorActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/photo_edit_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/white_green_border_bottom">
+
+            <Button
+                android:id="@+id/zoom_button"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/magnifier_selector"
+                android:padding="5dip" />
+
+            <Button
+                android:id="@+id/auto_clear_button"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/magic_selector"
+                android:padding="5dip" />
+
+            <Button
+                android:id="@+id/manual_clear_button"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/pencil_selector"
+                android:padding="5dip" />
+
+            <LinearLayout
+                android:id="@+id/manual_clear_settings_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Eraser size:" />
+
+                <SeekBar
+                    android:id="@+id/strokeBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:max="30"
+                    android:progress="15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    <com.alexvasilkov.gestures.views.GestureFrameLayout
+        android:id="@+id/gestureView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- GestureFrameLayout can contain only one child -->
+
+        <FrameLayout
+            android:id="@+id/drawViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.thriftify.utils.DrawView
+                android:id="@+id/drawView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/loadingModal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/loadingView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </com.alexvasilkov.gestures.views.GestureFrameLayout>
+
+</LinearLayout>
+
+
+
+

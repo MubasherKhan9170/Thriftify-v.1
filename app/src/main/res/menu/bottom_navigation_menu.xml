@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/dashboard_item_title">
+    </item>
+
+    <item
+        android:id="@+id/scan"
+        android:icon="@drawable/ic_scan"
+        android:title="@string/scan_item_title">
+    </item>
+
+    <item
+        android:id="@+id/shelve"
+        android:icon="@drawable/ic_shelve"
+        android:title="@string/shelve_item_title">
+    </item>
+
+    <item
+        android:id="@+id/ship"
+        android:icon="@drawable/ic_ship"
+        android:title="@string/ship_item_title">
+    </item>
+    <item
+        android:id="@+id/measure"
+        android:icon="@drawable/ic_measure"
+        android:title="@string/measure_item_title">
+    </item>
+
+
+</menu>

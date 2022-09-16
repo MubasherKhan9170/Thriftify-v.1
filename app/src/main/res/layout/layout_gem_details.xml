@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="secondaryViewModel"
+            type="com.example.thriftify.viewmodel.ProductDetailViewModel" />
+    </data>
+
+    <merge>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Top Action Bar Layout-->
+            <RelativeLayout
+                android:id="@+id/detail_top_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <include layout="@layout/layout_top_snippet_gem_details_actionbar" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_middle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_top_bar_layout">
+
+                <RelativeLayout
+                    android:id="@+id/gem_finding_notify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        app:cardElevation="2dp"
+                        app:strokeWidth="1dp"
+                        app:cardBackgroundColor="@{secondaryViewModel.productDetailMutableLiveData.isSalable==true?@color/light_green:@color/light_red}"
+                        app:cardCornerRadius="8dp"
+                        android:layout_gravity="center"
+                        app:cardVisible="@{secondaryViewModel.productDetailMutableLiveData.error}">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{secondaryViewModel.productDetailMutableLiveData.isSalable==true?@string/gem_salable:@string/gem_not_salable}"
+                            android:textColor="@{secondaryViewModel.productDetailMutableLiveData.isSalable ==true?@color/green:@color/red}"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gem_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gem_finding_notify_layout"
+                    android:layout_margin="8dp">
+
+                    <include layout="@layout/layout_gem_attribute_detail_card"
+                        bind:cardViewModel = "@{secondaryViewModel}"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_below="@+id/gem_detail"
+                    app:LayoutVisible="@{secondaryViewModel.productDetailMutableLiveData.isSalable}">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/shelf_number_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:helperText="@string/required_text"
+                        android:layout_marginBottom="8dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/enter_shelf_number_text_field" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shelf_number_text_input_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/enter_donor_id_text_field" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_below="@id/detail_middle_layout"
+                android:layout_alignParentBottom="true"
+                style="?android:attr/buttonBarButtonStyle"
+                app:LayoutVisible="@{secondaryViewModel.productDetailMutableLiveData.isSalable}">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:elevation="2dp"
+                    android:text="@string/cancel_button"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:text="@string/add_button"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </merge>
+</layout>

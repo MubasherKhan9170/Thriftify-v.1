@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.example.thriftify.viewmodel.ShipActivityViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order ID:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="fill_horizontal"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#12000005000"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/gem_image_id"
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/image_view_todo"
+                    android:src="@drawable/book_cover"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/gem_image_id"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:id="@+id/product_name_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Atomic Habits: The life-changing million copy bestseller"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@{viewModel.shippedOrder_liveData.get(position).product_name}"/>
+
+                    <GridLayout
+                        android:layout_below="@id/product_name_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="8"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp">
+                        <!--this is row 0-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:text="Location"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:gravity="fill_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_row="0"
+                            android:text="Product Type"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1" />
+                        <!--this is row two-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+                            android:layout_rowSpan="2"
+                            android:layout_rowWeight="1"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:gravity="fill_horizontal"
+                            android:text="111"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_row="1"
+                            android:text="Dresses"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_rowSpan="2" />
+                        <!--this is row 3-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:text="Qty"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_row="3"
+                            android:text="Price"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1" />
+                        <!--this is row four-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="4"
+                            android:text="1.0000"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_rowSpan="2" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="fill_horizontal"
+                            android:layout_column="1"
+                            android:layout_row="4"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_rowSpan="2">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/u00a3"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11.00"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </GridLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/u00a3"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11.00"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="6"
+                android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <!--row one-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:text="Ship to Address"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="fill_horizontal"
+                    android:textSize="16sp"
+                    android:layout_rowSpan="4"
+                    android:layout_columnWeight="0.6" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:text="Hamayun Siddique r1 islamabad pakistan Lucan, Dublin ireland Islamabad, Eh15 1nr Ireland T: 3325286681"
+                    android:textColor="@color/black"
+                    android:gravity="fill_horizontal"
+                    android:textSize="12sp"
+                    android:layout_rowSpan="4"
+                    android:layout_columnWeight="1" />
+            </GridLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:backgroundTint="@color/red"
+                android:text="Re-print Label"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_gravity="center"
+                android:layout_margin="8dp" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Theme.Thriftify" parent="Theme.MaterialComponents.Light.NoActionBar">
+        &lt;!&ndash; Primary brand color. &ndash;&gt;
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+
+
+        &lt;!&ndash; Secondary brand color. &ndash;&gt;
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryLightColor</item>
+
+        &lt;!&ndash;Background color&ndash;&gt;
+
+        <item name="colorBackgroundFloating">#afafff</item>
+        <item name="colorOnBackground">#4CAF50</item>
+        &lt;!&ndash;Surface color&ndash;&gt;
+        <item name="colorSurface">#4CAFff</item>
+        <item name="colorOnSurface">#000000</item>
+        &lt;!&ndash;Error color&ndash;&gt;
+        &lt;!&ndash;<item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/white</item>&ndash;&gt;
+        &lt;!&ndash; Status bar color. &ndash;&gt;
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="android:windowActionBarOverlay">true</item>
+        &lt;!&ndash; enable window content transitions &ndash;&gt;
+        <item name="android:windowContentTransitions">true</item>
+
+
+
+
+
+
+    </style>-->
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+
+
+    </style>
+
+
+    <style name="LoginTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="showAsAction">always|collapseActionView</item>
+        <item name="layout_scrollFlags">enterAlwaysCollapsed</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+<!--    1. Primary
+    2. Primary Variant
+    3. Secondary
+    4. Secondary Variant
+    5. Background
+    6. Surface
+    7. Error
+    8. On Primary
+    9. On Secondary
+    10. On Background
+    11. On Surface
+    12. On Error-->
+
+
+
+</resources>

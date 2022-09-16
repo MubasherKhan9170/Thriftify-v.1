@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/drawable/splash_background.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/drawable/white_green_border_bottom.xml" value="0.1" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/drawable/white_green_border_top.xml" value="0.11640625" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/activity_editor.xml" value="0.10245901639344263" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/activity_main.xml" value="0.13866120218579234" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/activity_scanning_details_gem.xml" value="0.1" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/fragment_lanuch.xml" value="0.104296875" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/fragment_scan.xml" value="0.185546875" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/fragment_shelve.xml" value="0.11509562841530055" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/fragment_unbar_coded_gems.xml" value="0.1" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/layout_gem_details.xml" value="0.1" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/layout_product_edit_dialog_box.xml" value="0.12704918032786885" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/layout_shelve_gem_attribute_detail_card.xml" value="0.11509562841530055" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/layout/layout_top_snippet_shelve_appbar.xml" value="0.185546875" />
+        <entry key="..\:/Users/Mubasher/AndroidStudioProjects/Thriftify-V1/Thriftify/app/src/main/res/menu/shelve_fragment_menu.xml" value="0.185546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="Thriftify.app" />
+      </set>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,380 @@
+<resources>
+    <string name="app_name">Thriftify</string>
+    <string name="gem_detail_title_name">Gem Details</string>
+    <string name="gem_salable">It\'s a Gem! Congratulations. Now, tell us where you\'re going to store it.</string>
+    <string name="gem_not_salable">Sorry, not a gem. Please try again!</string>
+    <string name="camera_storage_access_required">Camera and Storage access is required to get the device storage data.</string>
+    <string name="ok">OK</string>
+    <string name="continues"> Continue</string>
+    <!--<string name="gems_name">Gems Name</string>-->
+    <string name="enter_donor_id_text_field">Enter Donor ID</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="enter_shelf_number_text_field">Enter Shelf Number</string>
+    <string name="price_text_view">Price</string>
+    <string name="u00a3">£</string>
+    <string name="barcode_text_view">Barcode</string>
+    <string name="category_text_view">Category</string>
+    <string name="image_view_todo">TODO</string>
+    <string name="type_isbn"> Type ISBN Number …</string>
+    <string name="scan_an_isbn_barcode_text_view">Scan an ISBN Barcode</string>
+    <string name="category_type_text_field">Category</string>
+    <string name="product_name_text_field">Product Name (Use below example format)</string>
+    <string name="add_images_text">Add Images <font fgcolor='#FF0000'>*</font></string>
+    <string name="required_text"><font fgcolor='#FF0000'>*</font>Required</string>
+    <string name="required_product_name_text"><font fgcolor='#FF0000'>*</font>Required (Example: Zara pink Midi Dress - size 12)</string>
+    <string name="recent_search_text_view">Recent Searches</string>
+    <string name="dashboard_item_title">DASHBOARD</string>
+    <string name="scan_item_title">SCAN</string>
+    <string name="shelve_item_title">SHELVE</string>
+    <string name="ship_item_title">SHIP</string>
+    <string name="measure_item_title">Measure</string>
+    <string name="product_description_text_field">Product Description</string>
+    <string name="shelf_number_text_field">Shelf Number</string>
+    <string name="price_text_field">Price</string>
+    <string name="brand_auto_text_field">Brand</string>
+    <string name="color_auto_text_field">Color</string>
+    <string name="fabric_auto_text_field">Fabric</string>
+    <string name="condition_auto_text_field">Condition</string>
+    <string name="size_auto_text_field">Size</string>
+    <string name="dress_style_auto_text_field">Dress style</string>
+    <string name="dress_length_auto_text_field">Dress length</string>
+    <string name="dress_type_auto_text_field">Dress type</string>
+    <string name="gift_aid_donor_id_text_field">Gift Aid Donor ID</string>
+    <string name="upload_photos_text_view">Upload photos</string>
+    <string name="uploading_label">show uploading label</string>
+    <string name="attachment_files_button">Attach Files</string>
+    <string name="search_item">Search</string>
+    <string name="logout_item">Logout</string>
+    <string name="chooser_title">Open with</string>
+
+    <!--shelve activity-->
+    <string name="shelve_title_name">Organise the Gems for Sale</string>
+    <string name="product_search_label">Product Title</string>
+
+    <!--ship activity-->
+    <string name="ship_title_name">Print Packing Labels/Alert Courier</string>
+
+    <!--dashboard activity-->
+    <string name="dashboard_title_name">Dashboard Mubashar Khan</string>
+    <string name="title_activity_login">Retailer User Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Retailer Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_email">Not a valid email address</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+
+    <!--measure report activity-->
+    <string name="measure_title_name">Thriftify Sales Report</string>
+
+
+    <!--share element animation-->
+    <string name="share_text_element">thriftify_logo_text</string>
+
+
+    <!--Unbarcoded Fragment-->
+        <string-array name="category">
+            <item>Fashion-Women-Dresses</item>
+            <item>Fashion-Women-Jumpers &amp; Cardigans</item>
+            <item>Fashion-Women-Tops</item>
+            <item>Fashion-Women-Skirts</item>
+            <item>Fashion-Women-Coats &amp; Jackets</item>
+            <item>Fashion-Women-Jeans</item>
+            <item>Fashion-Women-Trousers &amp; Leggings</item>
+            <item>Fashion-Women-Shoes</item>
+            <item>Fashion-Women-Accessories</item>
+            <item>Fashion-Women-Bridal wear-Dress</item>
+            <item>Fashion-Women-Bridal wear-Accessories</item>
+            <item>Fashion-Men-Coats &amp; Jackets</item>
+            <item>Fashion-Men-Blazers &amp; Suit</item>
+            <item>Fashion-Men-Jumpers &amp; Hoodies</item>
+            <item>Fashion-Men-Shirts &amp; Tees</item>
+            <item>Fashion-Men-Jeans &amp; Trousers</item>
+            <item>Fashion-Men-Shoes &amp; Trainers</item>
+            <item>Fashion-Men-Accessories</item>
+            <item>Summer Sale</item>
+        </string-array>
+
+    <!--{ "Dr Denim", "Dr Martens", "Dune", "Dunnes Stores",
+        "Dusty Daze", "Dyanasty", "ebonie n ivory", "Eeight", "ellesse", "EMME", "Emory Park", "Emporio Armani", "Esprit", "Essentiel Antwerp", "F&F",
+        "F & P", "Fabienne Chapot", "Faith", "famine Chapot", "Faithfull the Bran", "Fashion Union", "Fila", "Finders Keepers", "Fiorella Rubino",
+        "Fiorucci", "Flounce London", "Forever New", "Forever U", "Forever Unique", "For Love and Lemons", "Fred Perry", "Free People", "French Connection",
+        "Frock and Fill", "Gerard Darel", "Gerry Weber", "Gestuz", "Ghospell", "Ghost", "Glamorous", "Glamorous Bloom", "Goddiva", "Go Guy", "Gold",
+        "Goosecraft", "Grass Collection", "Guess", "G-Star", "Havaianas", "Hobbs", "Hollister", "Hope & lvy", "Hosbjerg", "House of AKI-NA",
+        "House of Holland", "House of Stars", "HUGO", "Hunter", "Iden Denim", "In The Style", "Ivyrevel", "J'aime La Vie", "Jack Wills", "Jacques Vert",
+        "Jaded London", "Jakke", "Jarlo", "JDY", "Jeffrey Campbell", "John Zack", "Juicy Couture", "Junarose", "Kaltur", "Karen Millen", "Karl Lagerfeld",
+        "Katch me", "Kate Spade", "Keepsake", "Kickers", "Kikiriki", "Kings of Indigo", "Klein Petit", "Koi Footwear", "Kurt Geiger London", "Label Be",
+        "Lace and Beads", "Laced in Love", "Lacoste", "Lamoda", "Lasula", "Lavish Alice", "Lazy Oaf", "Lemon Lunar", "Leon and Harper", "Levete Room",
+        "Levi's", "LF Markey", "Life is Beautiful", "Lily and Lionel", "Lipsy", "Liquorish", "Liquor N Poker", "Little Mistress", "L.K. Bennett",
+        "Lost Ink", "Louis Feraud", "Loverdrobe", "Love Moschino", "Love Triangle", "Madeline Gardener", "Mads Norgaard", "Maison Scotch", "Malboro Classics",
+        "Mama.licious", "Mango", "Maria Grachvogel", "Massimo Dutti", "Max & Co", "MaxMara", "Maya", "M.C. Overalls", "Micha Lounge", "Minimale Animale",
+        "Mint Velvet", "Missguided", "Miss Selfridge", "Miss Sixty", "Monki", "Moon Boot", "Moon River", "Morgan", "Moschino", "Moschino Jeans",
+        "Moss Copenhagen", "Motel", "Mukzin", "Musier", "NaaNaa", "NA-KD", "Namilia", "Napapijri", "Native Youth", "Needle and Thread", "Neon Rose",
+        "Never Fully Dressed", "New Balance", "New Girl Order", "New Look", "Nike", "Noisy May", "NoName \"Made in Italy\"", "O'Mighty", "Oasis", "Object",
+        "Occasion Dress", "Office", "Oltre", "One Above Another", "One Teaspoon", "Only", "Opening Ceremony", "Opulence England", "Outrageous Fortune",
+        "Paper Dolls", "Parallel Lines", "Penfield", "People Tree", "PEP & CO", "Peter Pilotto", "Pia Gladys Perey", "Pieces", "Pinkie", "Pistachio",
+        "Phase Eight", "Polo Ralph Lauren", "PRECIS", "Pretty Lavish", "PrettyLittleThing", "Prima Part 3", "Principles Petite", "PS Paul Smith",
+        "Public Desire", "Pull&Bear", "Puma", "Queen Bee", "Quicksilver", "Quiz", "Rahi Cali", "Raid", "Rains", "Ralph Lauren", "Ralph Lauren Sport", "Rare",
+        "Reclaimed Vintage", "Reebok", "Religion", "Resume", "Rewd'elle", "Rhythm", "Ripcurl", "Rip N Dip", "River Island", "Roman Originals", "Sacred Hawk",
+        "Saint Genies", "Santa Cruz", "Saas & Bride", "Scarlett", "Scarlet Rocks", "Seafolly", "Selected", "Signature 8", "Significant Other", "SIMMI Shoes",
+        "Simply Be", "sister jane", "Sisters of the Tribe", "Sixth June", "Skechers", "Skylar Rose", "Solillas", "So Amazing", "Sorel", "Sorelle",
+        "Sinequanone", "Speed", "Sportmax Code", "Sorella Vita", "Starlet", "Stella McCarteny", "Steve Madden", "Stevie May", "Stradivarius", "Superdry",
+        "Superga", "Taller Than Your Average", "Taifun", "Ted Baker", "Teva", "TFNC", "The Couture Club", "The East Coast", "The east Order",
+        "The Jetset Diaries", "The North Face", "The Ragged Priest", "TiBi", "Tigerlily", "Tiger of Sweden Jeans", "Timberland", "Tommy Hilfiger",
+        "Tommy Jeans", "Toms", "Topshop", "True Decadence", "True Violet", "Twisted Wunder", "UGG", "UNIQUE 21", "Unique 21 HeroUrgan Bliss",
+        "Urbancode", "Vagabond Vans", "Valmeline", "Vans", "Vero Moda", "Verona", "Versace", "Vesper", "Vestire", "Vila", "Vintage", "Vintage Supply",
+        "Violet Sky", "Virgos Lounge", "Vivienne Westwood", "Volcom", "Voyelles", "Warehouse", "We are Kindred", "Wednesday's Girl", "Weekday",
+        "Wesley Harriot", "We The Free by Free People", "Who What Wear", "Whistles", "White Sand", "Wild Honey", "Wrangler", "Y.A.S", "Yaura", "Z_Code_Z",
+        "Zara Womman", "Zulu and Zephyr", "ZYA", "Nasty Gal", "Regatta", "Forever 21", "Jacqueline De Yong", "Pink Soda", "Parisian", "NY&Co", "Divas",
+        "Forever 21", "Tahari by Arthur S.Levine", "Chicwish", "Aideen Bodkin", "Sfizio", "Helen Cody", "Golden Spiderweb", "Save the Queen",
+        "Paul Costello Dressage", "Michael Kors", "Banana Republic", "Betty Barclay", "John Rocha", "Cynthia Rowley", "Flirt by Maggie Sotero", "Laura Ashley",
+        "Part Two", "Kendall & Kylie", "Lauren Vidal", "Portobello Punk", "Brandy Melville", "P&Y Denim", "Basler", "QED London", "Frank Lyman", "Ingenue", "Other"}-->
+    <string-array name="brand">
+        <item>&amp; Other Stories</item>
+        <item>2nd Day</item>
+        <item>4th &amp; Reckless</item>
+        <item>Abercrombie &amp; Fitch</item>
+        <item>Accessorize</item>
+        <item>Adidas</item>
+        <item>adidas Originals</item>
+        <item>adidas performance</item>
+        <item>Aeryne</item>
+        <item>Acasa</item>
+        <item>AKH Fashion</item>
+        <item>ALDO</item>
+        <item>Alice+Olivia</item>
+        <item>AllSaints</item>
+        <item>Amelia Rose</item>
+        <item>Amuse Society</item>
+        <item>Anaya</item>
+        <item>Angelina Faccenda</item>
+        <item>Anna Sui</item>
+        <item>Another Reason</item>
+        <item>A.P.C</item>
+        <item>Aquascutum London</item>
+        <item>Aratta</item>
+        <item>Armani</item>
+        <item>Armani Exchange</item>
+        <item>A Star is Born</item>
+        <item>Asos</item>
+        <item>Atoir</item>
+        <item>Autograph</item>
+        <item>AYM Studio</item>
+        <item>BA&amp;SH</item>
+        <item>Bandia</item>
+        <item>Barbour</item>
+        <item>Bariano</item>
+        <item>Balenciaga</item>
+        <item>Bec &amp; Bridge</item>
+        <item>Be Mine</item>
+        <item>Bershka</item>
+        <item>Billabong</item>
+        <item>Birkenstock</item>
+        <item>BLANK NYC</item>
+        <item>Blue Magic</item>
+        <item>Blue &amp; Grey</item>
+        <item>Blume</item>
+        <item>Boohoo</item>
+        <item>Brand Denim</item>
+        <item>Bronx</item>
+        <item>Bronx &amp; Banco</item>
+        <item>Buffalo</item>
+        <item>Burgess/Fever</item>
+        <item>b.young</item>
+        <item>C/meo Collective</item>
+        <item>Calvin Klein</item>
+        <item>Calvin Klein Jeans</item>
+        <item>Calvin Klein Performance</item>
+        <item>Capulet</item>
+        <item>Carhartt WIP</item>
+        <item>Cat Footwear</item>
+        <item>Charlie Holiday</item>
+        <item>Chelsea Peers</item>
+        <item>Chi Chi London</item>
+        <item>City Chic</item>
+        <item>City Goddess</item>
+        <item>Cleobella</item>
+        <item>Closet London</item>
+        <item>Club L London</item>
+        <item>Coast</item>
+        <item>Collective the Label</item>
+        <item>Collusion</item>
+        <item>Columbia</item>
+        <item>Converse</item>
+        <item>COS</item>
+        <item>Criminal Damage</item>
+        <item>Crocs</item>
+        <item>Current Air</item>
+        <item>Current Air Plus</item>
+        <item>Custom Made</item>
+        <item>Daisy Street</item>
+        <item>Dark Pink</item>
+        <item>DB Berdan</item>
+        <item>Debenhams Collection</item>
+        <item>DEPP</item>
+        <item>Desree</item>
+        <item>Diana Gallesi</item>
+        <item>Diana Marco</item>
+        <item>Diane Von Furstenberg</item>
+        <item>Diesel</item>
+        <item>DKNY</item>
+        <item>Dolly and Delicious</item>
+        <item>Dorothy Perkins</item>
+    </string-array>
+
+    <string-array name="color">
+        <item>Beige</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Brown</item>
+        <item>Copper</item>
+        <item>Clear</item>
+        <item>Cream</item>
+        <item>Gold</item>
+        <item>Green</item>
+        <item>Gray</item>
+        <item>Multi</item>
+        <item>Navy</item>
+        <item>Orange</item>
+        <item>Pattern</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Red</item>
+        <item>Sliver</item>
+        <item>Stone</item>
+        <item>Tan</item>
+        <item>Turquoise</item>
+        <item>White</item>
+        <item>Wine</item>
+        <item>Yellow</item>
+    </string-array>
+
+    <string-array name="fabric">
+        <item>Acrylic</item>
+        <item>Bamboo</item>
+        <item>Blend</item>
+        <item>Chiffon</item>
+        <item>Organic Cotton</item>
+        <item>Cotton blend</item>
+        <item>Crape</item>
+        <item>Denim</item>
+        <item>Faux fur</item>
+        <item>Fleece</item>
+        <item>Jacquard</item>
+        <item>Jersey</item>
+        <item>Knit</item>
+        <item>Lace</item>
+        <item>Mesh</item>
+        <item>Neoprene</item>
+        <item>Nylon</item>
+        <item>Lycra</item>
+        <item>Organza</item>
+        <item>Plush</item>
+        <item>Polyester</item>
+        <item>Satin</item>
+        <item>Spandex</item>
+        <item>Suede</item>
+        <item>Tartan</item>
+        <item>Toile</item>
+        <item>Sheepskin</item>
+        <item>Viscose</item>
+        <item>Other</item>
+        <item>Velour</item>
+        <item>Leather</item>
+        <item>Velvet</item>
+        <item>Faux Leather</item>
+        <item>Wool</item>
+        <item>Non leather</item>
+    </string-array>
+
+    <string-array name="condition">
+        <item>Pre-Owned</item>
+        <item>Used Very Good</item>
+        <item>New With Defects</item>
+        <item>New Without Tags</item>
+        <item>New With Tags</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>UK 2</item>
+        <item>UK 4</item>
+        <item>UK 6</item>
+        <item>UK 8</item>
+        <item>UK 10</item>
+        <item>UK 12</item>
+        <item>UK 14</item>
+        <item>UK 16</item>
+        <item>UK 18</item>
+        <item>UK 20</item>
+        <item>UK 22</item>
+        <item>UK 24</item>
+        <item>UK 26</item>
+        <item>UK 28</item>
+        <item>UK 30</item>
+        <item>UK 32</item>
+        <item>XXS</item>
+        <item>XS</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>2XL</item>
+        <item>3XL</item>
+        <item>S/M</item>
+        <item>M/L</item>
+        <item>One Size</item>
+        <item>Adjustable</item>
+    </string-array>
+
+    <string-array name="dress_Style">
+        <item>A Line</item>
+        <item>Backless</item>
+        <item>Bandage</item>
+        <item>Bandeau</item>
+        <item>Bardot</item>
+        <item>Bodycon</item>
+        <item>Cold Shoulder</item>
+        <item>Denim</item>
+        <item>Dungaree</item>
+        <item>Halter</item>
+        <item>High Waisted</item>
+        <item>Jumper Dress</item>
+        <item>Leather</item>
+        <item>Long Sleeve</item>
+        <item>Off Shoulder</item>
+        <item>Other</item>
+        <item>Overshirts</item>
+        <item>Pencil Dress</item>
+        <item>Pinafore</item>
+        <item>Shift</item>
+        <item>Shirt</item>
+        <item>Skater</item>
+        <item>Slip</item>
+        <item>Smock Dresses</item>
+        <item>Swing</item>
+        <item>Tea</item>
+        <item>Wiggle</item>
+        <item>Wrap</item>
+    </string-array>
+
+    <string-array name="dress_Length">
+        <item>Mini</item>
+        <item>Midi</item>
+        <item>Maxi</item>
+    </string-array>
+
+    <string-array name="dress_Type">
+        <item>Bridal Dresses</item>
+        <item>Bridesmaid Dresses</item>
+        <item>Casual Dresses</item>
+        <item>Going Out Dresses</item>
+        <item>Occasion Dresses</item>
+        <item>Other Dresses</item>
+        <item>Summer Dresses</item>
+        <item>Work Dresses</item>
+    </string-array>
+
+
+
+</resources>

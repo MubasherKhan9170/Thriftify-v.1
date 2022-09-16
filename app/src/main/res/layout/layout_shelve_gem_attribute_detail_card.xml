@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.example.thriftify.viewmodel.ShelveCardDetailModelView" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gem_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Atomic Habits: The life-changing million copy bestseller"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="2dp"
+                android:layout_margin="2dp"
+                android:background="@color/light_grey"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:textIsSelectable="true"
+                android:text="@{viewModel.userLiveData.get(position).product_name}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/gem_image_id"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/image_view_todo"
+                    android:src="@drawable/book_cover"
+                    android:layout_margin="8dp" />
+                <!--app:imageUrl = "@{cardViewModel.productDetailMutableLiveData.product.productImageUrl}"-->
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="18"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:text="SKU"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_sku_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        tools:text="40120-600ae3dc01e2b"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_sku}"/>
+
+                    <Space
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:text="Location"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_location_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="2"
+                        tools:text="112"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text= "@{viewModel.userLiveData.get(position).product_location}"/>
+
+                    <Space
+                        android:layout_row="3"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="4"
+                        android:text="Price"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <LinearLayout
+                        android:layout_columnWeight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_row="4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="@string/u00a3"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/gem_price_id"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            tools:text="9.08"
+                            android:textColor="@color/black"
+                            android:gravity="fill_horizontal"
+                            android:textSize="12sp"
+                            android:text="@{viewModel.userLiveData.get(position).product_price}"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_row="5"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="5"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="6"
+                        android:text="Listed Since"
+                        android:layout_rowSpan="2"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_listed_since_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="6"
+                        tools:text="Friday, 22 January 2021"
+                        android:layout_rowSpan="2"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_listed_since}"/>
+
+                    <Space
+                        android:layout_row="8"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="8"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="9"
+                        android:text="Edition"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_edition_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="9"
+                        tools:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_edition}"/>
+
+                    <Space
+                        android:layout_row="10"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="10"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="11"
+                        android:text="Type"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_type_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="11"
+                        tools:text="Paperback"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_type}"/>
+
+                    <Space
+                        android:layout_row="12"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="12"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="13"
+                        android:text="Author/s"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_author_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="13"
+                        android:layout_rowSpan="2"
+                        tools:text="James clear"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_authors}"/>
+
+                    <Space
+                        android:layout_row="15"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <Space
+                        android:layout_row="15"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="16"
+                        android:text="Status"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:layout_columnWeight="1" />
+
+                    <TextView
+                        android:id="@+id/gem_status_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:layout_column="1"
+                        android:layout_row="16"
+                        tools:text="Active"
+                        android:textColor="@color/black"
+                        android:gravity="fill_horizontal"
+                        android:textSize="12sp"
+                        android:text="@{viewModel.userLiveData.get(position).product_status}"/>
+
+                </GridLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:elevation="2dp"
+                    android:text="Disable"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    style="?android:attr/button"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shelve_edit_button_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:backgroundTint="@color/blue_grey"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:onClickPosition="@{position}"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

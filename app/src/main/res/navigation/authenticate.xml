@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authenticate"
+    app:startDestination="@id/lanuchFragment">
+
+    <fragment
+        android:id="@+id/lanuchFragment"
+        android:name="com.example.thriftify.view.ui.fragments.LanuchFragment"
+        android:label="fragment_lanuch"
+        tools:layout="@layout/fragment_lanuch" >
+        <action
+            android:id="@+id/action_lanuchFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/lanuchFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_lanuchFragment_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@id/lanuchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.thriftify.view.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

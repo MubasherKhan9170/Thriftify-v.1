@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cardViewModel"
+            type="com.example.thriftify.viewmodel.ProductDetailViewModel" />
+
+    </data>
+
+    <merge>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            app:strokeWidth="2dp"
+            app:cardCornerRadius="2dp"
+            android:layout_gravity="center"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/gems_name_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@{cardViewModel.productDetailMutableLiveData.product.productName}"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:textIsSelectable="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/gem_image_id"
+                        android:layout_width="180dp"
+                        android:layout_height="240dp"
+                        android:contentDescription="@string/image_view_todo"
+                        app:imageUrl = "@{cardViewModel.productDetailMutableLiveData.product.productImageUrl}" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/price_text_view"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/u00a3"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/gem_price_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    tools:text="@{cardViewModel.productDetailMutableLiveData.product.price.thriftifySellingPrice}"
+                                    android:textSize="12sp"
+                                    android:textIsSelectable="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/barcode_text_view"
+                                android:textStyle="bold"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/gem_barcode_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="@{cardViewModel.productDetailMutableLiveData.product.productBarcode}"
+                                android:textSize="12sp"
+                                android:textIsSelectable="true" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/category_text_view"
+                                android:textStyle="bold"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/gem_category_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                tools:text="@{cardViewModel.productDetailMutableLiveData.product.productType}"
+                                android:textSize="12sp"
+                                android:textIsSelectable="true" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </merge>
+</layout>

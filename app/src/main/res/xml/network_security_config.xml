@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--Set application-wide security config using base-config tag.-->
+    <base-config cleartextTrafficPermitted="false" />
+
+    <!--Set domain-specific security config using domain-config tags. -->
+    <domain-config>
+
+    <domain includeSubdomains="true">thriftify-api.shapelab.ee</domain>
+            <debug-overrides>
+                <trust-anchors>
+                    <certificates src="user"/>
+                </trust-anchors>
+            </debug-overrides>
+        </domain-config>
+</network-security-config>
